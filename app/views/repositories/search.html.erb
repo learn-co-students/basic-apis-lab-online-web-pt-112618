@@ -5,3 +5,16 @@
   <%= submit_tag "Search Github!" %>
 <% end %>
 
+<div>
+  <% if @attributes %>
+    <ul>
+      <% @attributes.each do |attr| %>
+        <li>
+          <%= attr["name"] %><br>
+          <%= link_to attr["html_url"], attr["html_url"] %><br>
+          <%= attr["description"] %>
+        </li><br>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
